@@ -46,7 +46,7 @@
 					<h5 class="card-title">Cadastrar - Agendamento de Potenciais Clientes</h5>
 					<p class="card-text">Sistema utilizado para agendamento de serviços.</p>
 					<p>
-					<form method="post" action="controller/ControllerCadastro.php" id="form" name="form">
+					<form method="post" action=" # " id="form" name="form">
 						<div class="form-group">
 							<label for="exampleFormControlInput1">Nome:</label>
 							<input type="text" class="form-control" name="txtNome" required id="txtNome">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\agendamentoscontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+
 Route::get('/consulta', function () {
     return view('consulta');
 });
+

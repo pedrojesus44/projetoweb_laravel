@@ -55,26 +55,17 @@
 							</tr>
 						</thead>
 						<tbody id="TableData ">
-							<?php
-							//$ controller = new  ControllerCadastro ();
-							//$ resultado = $ controlador -> listar ();
-							//print_r($resultado);
-							//for( $ i = 0 ; $ i <count( $ resultado ); $ i ++){
-							?>
-							<!--<tr>
-									<td scope="col"> </td >
-									<td scope="col"> </td>
-									<td scope="col"> </td>
-									<td scope="col"> </td>
-									<td scope="col"> </td>
-									<td scope="col">
+							<tr>
+									<td scope="col"></td >
+									<td scope="col"></td>
+									<td scope="col"></td>
+									<td scope="col"></td>
+									<td scope="col"></td>
+									<!--<td scope="col">
 										<button type="button" class ="btn btn-outline-primary" style ="width: 72px;">Editar</botão>
 										<button type="button" class ="btn btn-outline-primary" style="width: 72px;">Excluir</button>
-									</td>
-								</tr>-->
-							<?php
-							//}
-							?>
+									</td>-->
+								</tr>
 						</tbody>
 					</table>
 				</div>
