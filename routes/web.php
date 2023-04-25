@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\agendamentoscontroller;
+use App\Models\agendamentos;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\agendamentoscontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Route::get('/consulta', function () {
+  //  return view('consulta');
+//});
+
+Route::get('/consulta', [agendamentoscontroller::class, 'index']);
 
 Route::get('/', function () {
     return view('index');
 });
 
-
-Route::get('/consulta', function () {
-    return view('consulta');
-});
-
+Route::post('/cadastrar', [agendamentoscontroller::class, 'store']);

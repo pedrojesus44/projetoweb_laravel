@@ -46,20 +46,21 @@
 					<h5 class="card-title">Cadastrar - Agendamento de Potenciais Clientes</h5>
 					<p class="card-text">Sistema utilizado para agendamento de serviços.</p>
 					<p>
-					<form method="post" action=" # " id="form" name="form">
+					<form method="post" action="/cadastrar" id="form" name="form">
+						@csrf
 						<div class="form-group">
 							<label for="exampleFormControlInput1">Nome:</label>
-							<input type="text" class="form-control" name="txtNome" required id="txtNome">
+							<input type="text" class="form-control" name="nome" required id="txtNome">
 						</div>
 						<br>
 						<div class="form-group">
 							<label for="exampleFormControlInput1">Telefone:</label>
-							<input type="tel" class="form-control" required name="txtTelefone" id="txtTelefone" placeholder="(xx)xxxxx-xxxx">
+							<input type="tel" class="form-control" required name="telefone" id="txtTelefone" placeholder="(xx)xxxxx-xxxx">
 						</div>
 						<br>
 						<div class="form-group">
 							<label for="exampleFormControlSelect1">Origem:</label>
-							<select class="form-control" required name="txtOrigem" id="txtOrigem">
+							<select class="form-control" required name="origem" id="txtOrigem">
 								<option>Celular</option>
 								<option>Fixo</option>
 								<option>Whatsapp</option>
@@ -71,12 +72,12 @@
 						<br>
 						<div class="form-group">
 							<label for="exampleFormControlInput1">Data do Contato:</label>
-							<input type="date" class="form-control" required name="txtDataContato" id="txtDataContato">
+							<input type="date" class="form-control" required name="data_contato" id="txtDataContato">
 						</div>
 						<br>
 						<div class="form-group">
 							<label for="exampleFormControlTextarea1">Observação</label>
-							<textarea class="form-control" name="txtObservacao" id="txtObservacao" rows="3"></textarea>
+							<textarea class="form-control" name="observacao" id="txtObservacao" rows="3"></textarea>
 						</div>
 						<br>
 						<button type="submit" id="btnInserir" class="btn btn-primary">Cadastrar</button>

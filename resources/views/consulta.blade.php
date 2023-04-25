@@ -55,17 +55,19 @@
 							</tr>
 						</thead>
 						<tbody id="TableData ">
+							@foreach ($agendamentos as $agendamento)
 							<tr>
-									<td scope="col"></td >
-									<td scope="col"></td>
-									<td scope="col"></td>
-									<td scope="col"></td>
-									<td scope="col"></td>
+									<td scope="col">{{ $agendamento->nome }}</td >
+									<td scope="col">{{ $agendamento->telefone }}</td>
+									<td scope="col">{{ $agendamento->origem }}</td>
+									<td scope="col">{{ $agendamento->data_contato }}</td>
+									<td scope="col">{{ $agendamento->observacao }}</td>
 									<!--<td scope="col">
 										<button type="button" class ="btn btn-outline-primary" style ="width: 72px;">Editar</botão>
 										<button type="button" class ="btn btn-outline-primary" style="width: 72px;">Excluir</button>
 									</td>-->
 								</tr>
+								@endforeach
 						</tbody>
 					</table>
 				</div>
