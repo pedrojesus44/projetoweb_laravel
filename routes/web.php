@@ -25,3 +25,9 @@ Route::get('/', function () {
 });
 
 Route::post('/cadastrar', [agendamentoscontroller::class, 'store']);
+
+Route::get('/editar', function () {
+  return view('editar');
+});
+
+Route::delete('/excluir', [agendamentoscontroller::class, 'delete']);

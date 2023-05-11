@@ -62,10 +62,14 @@
 									<td scope="col">{{ $agendamento->origem }}</td>
 									<td scope="col">{{ $agendamento->data_contato }}</td>
 									<td scope="col">{{ $agendamento->observacao }}</td>
-									<!--<td scope="col">
+									<td scope="col">
 										<button type="button" class ="btn btn-outline-primary" style ="width: 72px;">Editar</botão>
-										<button type="button" class ="btn btn-outline-primary" style="width: 72px;">Excluir</button>
-									</td>-->
+										<form method="POST" action="/excluir" id="form" name="form">
+											@csrf
+											@method('DELETE')
+										<button type="submit" class ="btn btn-outline-primary" style="width: 72px;">Excluir</button>
+										</form>
+									</td>
 								</tr>
 								@endforeach
 						</tbody>

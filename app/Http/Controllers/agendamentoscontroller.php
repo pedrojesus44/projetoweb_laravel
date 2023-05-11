@@ -24,4 +24,12 @@ class agendamentoscontroller extends Controller
 
         return redirect('/consulta');
     }
+
+    public function delete($id) {
+        $agendamentos = agendamentos::findOrFail($id);
+        $agendamentos->delete();
+
+        return redirect('/consulta');
+
+    }
 }
