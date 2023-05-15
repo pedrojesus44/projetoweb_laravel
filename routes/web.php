@@ -30,4 +30,8 @@ Route::get('/editar', function () {
   return view('editar');
 });
 
-Route::delete('/excluir', [agendamentoscontroller::class, 'delete']);
+Route::get('/editar/{id}', [agendamentoscontroller::class, 'edit']);
+
+Route::put('/atualizar/{id}', [agendamentoscontroller::class, 'update']);
+
+Route::delete('/excluir/{id}', [agendamentoscontroller::class, 'delete']);

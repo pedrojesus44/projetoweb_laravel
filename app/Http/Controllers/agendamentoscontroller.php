@@ -7,7 +7,6 @@ use App\Models\agendamentos;
 
 class agendamentoscontroller extends Controller
 {
-    //
     public function index() {
         $agendamentos = agendamentos::all();
         return view('consulta', ['agendamentos' => $agendamentos]);
@@ -25,11 +24,18 @@ class agendamentoscontroller extends Controller
         return redirect('/consulta');
     }
 
-    public function delete($id) {
-        $agendamentos = agendamentos::findOrFail($id);
-        $agendamentos->delete();
+    public function edit($id) {
+        $agendamentos = agendamentos::findOrFail($id);   
+        return view('editar', ['agendamentos' => $agendamentos]);
+    }
 
+    public function update(Request $request) {
+        agendamentos::findOrFail($request->id)->update($request->all());      
         return redirect('/consulta');
+    }
 
+    public function delete($id) {
+        $agendamentos = agendamentos::findOrFail($id)->delete();
+        return redirect('/consulta');
     }
 }
