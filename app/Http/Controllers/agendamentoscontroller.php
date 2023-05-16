@@ -31,11 +31,11 @@ class agendamentoscontroller extends Controller
 
     public function update(Request $request) {
         agendamentos::findOrFail($request->id)->update($request->all());      
-        return redirect('/consulta');
+        return redirect('/consulta')->with('Mensagem', 'atualizado com sucesso');
     }
 
     public function delete($id) {
-        $agendamentos = agendamentos::findOrFail($id)->delete();
+        agendamentos::findOrFail($id)->delete();
         return redirect('/consulta');
     }
 }
