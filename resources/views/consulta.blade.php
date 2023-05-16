@@ -67,7 +67,7 @@
 											<form method="GET" action="/editar/{{ $agendamento->id }}" id="form" name="form">
 												@csrf
 												@method('GET')
-												<button type="button" class ="btn btn-outline-primary" style ="width: 72px;">Editar</botão>
+												<button type="submit" class ="btn btn-outline-primary" style ="width: 72px;">Editar</botão>
 											</form>
 											<form method="POST" action="/excluir/{{ $agendamento->id }}" id="form" name="form">
 												@csrf

@@ -46,42 +46,42 @@
 					<h5 class="card-title">Cadastrar - Agendamento de Potenciais Clientes</h5>
 					<p class="card-text">Sistema utilizado para agendamento de serviços.</p>
 					<p>
-					<form method="POST" action="/atualizar/{{ $agendamento->id }}" id="form" name="form">
+					<form method="POST" action="/atualizar/{{ $agendamentos->id }}" id="form" name="form">
 						@csrf
                         @method('PUT')
 						<div class="form-group">
 							<label for="exampleFormControlInput1">Nome:</label>
-							<input value="{{ $agendamento->nome }}" type="text" class="form-control" name="nome" required id="txtNome">
+							<input value="{{ $agendamentos->nome }}" type="text" class="form-control" name="nome" required id="txtNome">
 						</div>
 						<br>
 						<div class="form-group">
 							<label for="exampleFormControlInput1">Telefone:</label>
-							<input value="{{ $agendamento->telefone }}" type="tel" class="form-control" required name="telefone" id="txtTelefone" placeholder="(xx)xxxxx-xxxx">
+							<input value="{{ $agendamentos->telefone }}" type="tel" class="form-control" required name="telefone" id="txtTelefone" placeholder="(xx)xxxxx-xxxx">
 						</div>
 						<br>
 						<div class="form-group">
 							<label for="exampleFormControlSelect1">Origem:</label>
 							<select class="form-control" required name="origem" id="txtOrigem">
-								<option {{ $agendamento->origem === 'Celular' ? "selected" : '' }}>Celular</option>
-								<option {{ $agendamento->origem === 'Fixo' ? "selected" : '' }}>Fixo</option>
-								<option {{ $agendamento->origem === 'Whatsapp' ? "selected" : '' }}>Whatsapp</option>
-								<option {{ $agendamento->origem === 'Facebook' ? "selected" : '' }}>Facebook</option>
-								<option {{ $agendamento->origem === 'Instagram' ? "selected" : '' }}>Instagram</option>
-								<option {{ $agendamento->origem === 'Google Meu Negocio' ? "selected" : '' }}>Google Meu Negocio</option>
+								<option {{ $agendamentos->origem === 'Celular' ? "selected" : '' }}>Celular</option>
+								<option {{ $agendamentos->origem === 'Fixo' ? "selected" : '' }}>Fixo</option>
+								<option {{ $agendamentos->origem === 'Whatsapp' ? "selected" : '' }}>Whatsapp</option>
+								<option {{ $agendamentos->origem === 'Facebook' ? "selected" : '' }}>Facebook</option>
+								<option {{ $agendamentos->origem === 'Instagram' ? "selected" : '' }}>Instagram</option>
+								<option {{ $agendamentos->origem === 'Google Meu Negocio' ? "selected" : '' }}>Google Meu Negocio</option>
 							</select>
 						</div>
 						<br>
 						<div class="form-group">
 							<label for="exampleFormControlInput1">Data do Contato:</label>
-							<input value="{{ $agendamento->data_contato }}" type="date" class="form-control" required name="data_contato" id="txtDataContato">
+							<input value="{{ $agendamentos->data_contato }}" type="date" class="form-control" required name="data_contato" id="txtDataContato">
 						</div>
 						<br>
 						<div class="form-group">
 							<label for="exampleFormControlTextarea1">Observação</label>
-							<textarea class="form-control" name="observacao" id="txtObservacao" rows="3">{{ $agendamento->observacao }}"</textarea>
+							<textarea class="form-control" name="observacao" id="txtObservacao" rows="3">{{ $agendamentos->observacao }}</textarea>
 						</div>
 						<br>
-						<button type="submit" id="btnInserir" class="btn btn-primary">Cadastrar</button>
+						<button type="submit" id="btnInserir" class="btn btn-primary">Atualizar</button>
 					</form>
 					</p>
 				</div>
